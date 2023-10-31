@@ -2,7 +2,10 @@ package paramTests;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Configuration;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -12,6 +15,9 @@ import static com.codeborne.selenide.Selenide.*;
 
 
 public class CsvSourceMenuTest extends TestBase {
+    @Feature("Проверка топ-меню")
+    @Owner("I.Max")
+    @DisplayName("Проверка наличия разделов в топ-меню")
     @CsvSource({
             "Частным лицам",
             "Кредиты",
@@ -19,10 +25,10 @@ public class CsvSourceMenuTest extends TestBase {
             "Банковские счета и переводы",
             "Комплексное банковское обслуживание",
             "Банковские карты",
-            "Дополнительные услуги и продукты",
-            "Операции на рынке ценных бумаг",
-            "Депозитарные услуги",
-            "Дистанционное обслуживание",
+            "Дополнительные услуги и продукты тест",
+            "Операции на рынке ценных бумаг тест",
+            "Депозитарные услуги тест",
+            "Дистанционное обслуживание тест",
             "Журнал «Алые паруса»",
             "Удаленная идентификация по биометрии",
             "Корпоративным клиентам",
