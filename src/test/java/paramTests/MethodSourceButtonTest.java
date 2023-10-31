@@ -18,6 +18,7 @@ import java.util.stream.Stream;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
+import static io.qameta.allure.Allure.step;
 
 public class MethodSourceButtonTest extends TestBase {
 
@@ -35,9 +36,11 @@ public class MethodSourceButtonTest extends TestBase {
     @ParameterizedTest(name = "Проверка наличия кнопки {1} " + ", на странице {0}")
     @Tag("BLOCKER")
     void buttonSearch(String locale, List<String> buttons){
-        $$(".top-menu a").find(text(locale)).click();
-        $$(".aside-top-menu").filter(visible)
-                .shouldHave(CollectionCondition.texts(buttons));
-    }
+        step("Проверяем меню",()-> {
+            $$(".top-menu a").find(text(locale)).click();
+            $$(".aside-top-menu").filter(visible)
+                    .shouldHave(CollectionCondition.texts(buttons));
+        });
+            }
 
 }
