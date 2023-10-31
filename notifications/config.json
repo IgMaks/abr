@@ -1,0 +1,17 @@
+{
+  "base": {
+    "logo": "src/test/resources/file.png",
+    "project": "qa_guru",
+    "environment": "predProd",
+    "comment": "commit",
+    "reportLink": "",
+    "language": "ru",
+    "allureFolder": "allureReport",
+    "enableChart": false
+  },
+  "telegram": {
+    "token": "6380191917:AAECai7U5IOdj8rp_4EdKotpyt3X07Pz9zw",
+    "chat": "976128868",
+    "replyTo": ""
+  }
+}
