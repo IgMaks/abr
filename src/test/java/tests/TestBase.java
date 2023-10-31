@@ -11,6 +11,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
+import static com.codeborne.selenide.Selenide.open;
+
 public class TestBase {
     @BeforeAll
     static void beforeAll() {
@@ -20,6 +22,7 @@ public class TestBase {
         Configuration.browserSize = System.getProperty("size", "1920x1080");
         Configuration.baseUrl = System.getProperty("baseUrl", "https://abr.ru");
         Configuration.remote = System.getProperty("remote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+        open("https://abr.ru");
 
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
