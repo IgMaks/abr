@@ -20,9 +20,9 @@ public class TestBase {
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("version", "100");
         Configuration.browserSize = System.getProperty("size", "1920x1080");
-        Configuration.baseUrl = System.getProperty("baseUrl", "https://abr.ru");
+        Configuration.baseUrl = System.getProperty("baseUrl", "https://abr.ru/");
         Configuration.remote = System.getProperty("remote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
-        open("https://abr.ru");
+        open("https://abr.ru/");
 
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
