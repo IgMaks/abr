@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import tests.TestBase;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -15,12 +16,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
-public class MethodSourceButtonTest {
-    @BeforeEach
-    void menuOpen() {
-        open("https://abr.ru/");
-        Configuration.holdBrowserOpen = false;
-    }
+public class MethodSourceButtonTest extends TestBase {
 
     static Stream<Arguments> buttonSearch() {
         return Stream.of(

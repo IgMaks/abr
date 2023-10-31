@@ -6,16 +6,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import tests.TestBase;
 
 import static com.codeborne.selenide.Selenide.*;
 
 
-public class CsvSourceMenuTest {
-    @BeforeEach
-    void openPage() {
-        Configuration.holdBrowserOpen = false;
-        open("https://www.abr.ru");
-    }
+public class CsvSourceMenuTest extends TestBase {
     @CsvSource({
             "Частным лицам",
             "Кредиты",
