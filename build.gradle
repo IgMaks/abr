@@ -41,3 +41,21 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+test {
+    useJUnitPlatform()
+    def critical = tasks.register("Crit", Test) {
+        useJUnitPlatform {
+            includeTags "Crit"
+        }
+    }
+    def blocker = tasks.register("Block", Test) {
+        useJUnitPlatform {
+            includeTags "BLOCKER"
+        }
+    }
+    def high = tasks.register("High", Test) {
+        useJUnitPlatform {
+            includeTags "HIGH"
+        }
+    }
+}

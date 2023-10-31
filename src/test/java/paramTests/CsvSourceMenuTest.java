@@ -18,6 +18,7 @@ public class CsvSourceMenuTest extends TestBase {
     @Feature("Проверка топ-меню")
     @Owner("I.Max")
     @DisplayName("Проверка наличия разделов в топ-меню")
+    @Tag("Crit")
     @CsvSource({
             "Частным лицам",
             "Кредиты",
